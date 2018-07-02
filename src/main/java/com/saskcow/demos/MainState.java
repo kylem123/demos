@@ -1,4 +1,4 @@
-package demo;
+package com.saskcow.demos;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,8 +25,8 @@ public class MainState extends BasicGameState {
 	private static final Color projectColour = new Color(230, 230, 250);
 	private static final Color projectColour2 = new Color(176, 224, 230);
 	
-	private static ArrayList<Project> projects = new ArrayList<Project>();
-	private static ArrayList<MouseOverArea> buttons = new ArrayList<MouseOverArea>();
+	private static ArrayList<Project> projects = new ArrayList<>();
+	private static ArrayList<MouseOverArea> buttons = new ArrayList<>();
 	
 	@Override
 	public int getID() {
@@ -66,7 +66,7 @@ public class MainState extends BasicGameState {
 					}
 					try {
 					    String line = br.readLine();
-					    ArrayList<String> lines = new ArrayList<String>();
+					    ArrayList<String> lines = new ArrayList();
 					    
 					    while (line != null) {
 					        lines.add(line);
@@ -76,17 +76,17 @@ public class MainState extends BasicGameState {
 					    br.close();
 					    
 					    Project project = new Project();
-					    project.name = lines.get(1);
-					    project.description = lines.get(4);
-					    project.author = lines.get(7);
+					    project.setName(lines.get(1));
+					    project.setDescription(lines.get(4));
+					    project.setAuthor(lines.get(7));
 					    
-					    project.language = lines.get(10);
-					    project.srcFolder = lines.get(13);
-					    project.mainFile = lines.get(16);
+					    project.setLanguage(lines.get(10));
+					    project.setSrcFolder(lines.get(13));
+					    project.setMainFile(lines.get(16));
 					    
 					    projects.add(project);
 					    
-					    int lineNum = (int) ((projects.size() - 1) / 2);
+					    int lineNum = (projects.size() - 1) / 2;
 					    int pos = (projects.size() - 1) % 2;
 					    
 					    int x = 20 + (pos * 340);
@@ -97,7 +97,8 @@ public class MainState extends BasicGameState {
 					    	public void mousePressed(int button, int mx, int my) {
 					    		if(mx >= getX() && my >= getY() && mx <= (getX() + getWidth()) && my <= (getY() + getHeight())) {	
 						    		try {
-										Process p = Runtime.getRuntime().exec("cmd /c start cmd.exe /k " + pythonLocation + " " + dir.getAbsolutePath() + "/" + project.mainFile);
+//										Process p = Runtime.getRuntime().exec("cmd /c start cmd.exe /k " + pythonLocation + " " + dir.getAbsolutePath() + "/" + project.getMainFile());
+                                        Process p = Runtime.getRuntime().exec(String.format("cmd /c start cmd.exe /k %s %s/%s", pythonLocation, dir.getAbsolutePath(), project.getMainFile()));
 									} catch (IOException e) {
 										e.printStackTrace();
 									}
@@ -119,7 +120,7 @@ public class MainState extends BasicGameState {
 	}
 
 	@Override
-	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) {
 		g.setBackground(bgColour);
 		
 		g.setColor(Color.black);
@@ -140,13 +141,13 @@ public class MainState extends BasicGameState {
 			g.fillRect(x, y, 300, 60);
 			
 			g.setColor(Color.black);
-			g.drawString(project.name, x + 150 - (g.getFont().getWidth(project.name) / 2), y);
+			g.drawString(project.getName(), x + 150 - (g.getFont().getWidth(project.getName()) / 2), y);
 			
 			g.setColor(Color.lightGray);
-			g.drawString(project.description, x + 150 - (g.getFont().getWidth(project.description) / 2), y + 20);
+			g.drawString(project.getDescription(), x + 150 - (g.getFont().getWidth(project.getDescription()) / 2), y + 20);
 			
 			g.setColor(Color.gray);
-			String author = "By " + project.author;
+			String author = "By " + project.getAuthor();
 			g.drawString(author, x + 150 - (g.getFont().getWidth(author) / 2), y + 40);
 			
 			g.setColor(projectColour2);
@@ -155,13 +156,13 @@ public class MainState extends BasicGameState {
 			buttons.get(i).render(gc, g);
 			
 			g.setColor(Color.black);
-			String start = "Start " + project.name;
+			String start = "Start " + project.getName();
 			g.drawString(start, x + 150 - (g.getFont().getWidth(start) / 2), y + 80 - (g.getFont().getHeight(start) / 2));
 		}
 	}
 
 	@Override
-	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+	public void update(GameContainer gc, StateBasedGame sbg, int delta) {
 		
 	}
 
