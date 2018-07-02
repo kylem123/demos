@@ -1,0 +1,17 @@
+--Name--
+Locate Python Installation
+
+--Description--
+Used to find where python is
+
+--Author--
+Kyle Mandell
+
+--Language ('python' or 'java')--
+python
+
+--Source Folder--
+pythonlocate
+
+--Main File--
+pythonlocate/main.py
