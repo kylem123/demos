@@ -1,4 +1,4 @@
-package com.saskcow.demos;
+package main.java.demos;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;

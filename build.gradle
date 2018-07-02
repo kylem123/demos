@@ -1,11 +1,10 @@
-group 'com.saskcow'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'com.saskcow.demos.Demo'
+mainClassName = 'demos.Demo'
 
 defaultTasks 'run'
 
@@ -27,5 +26,4 @@ run.dependsOn(nativesSetup)
 dependencies {
     compile 'org.lwjgl.lwjgl:lwjgl:2.9.3'
     compile 'org.slick2d:slick2d-core:1.0.2'
-    compileOnly 'org.projectlombok:lombok:1.18.0'
 }

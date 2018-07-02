@@ -1,4 +1,4 @@
-package com.saskcow.demos;
+package main.java.demos;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -66,7 +66,7 @@ public class MainState extends BasicGameState {
 					}
 					try {
 					    String line = br.readLine();
-					    ArrayList<String> lines = new ArrayList();
+					    ArrayList<String> lines = new ArrayList<String>();
 					    
 					    while (line != null) {
 					        lines.add(line);
@@ -75,14 +75,7 @@ public class MainState extends BasicGameState {
 					    
 					    br.close();
 					    
-					    Project project = new Project();
-					    project.setName(lines.get(1));
-					    project.setDescription(lines.get(4));
-					    project.setAuthor(lines.get(7));
-					    
-					    project.setLanguage(lines.get(10));
-					    project.setSrcFolder(lines.get(13));
-					    project.setMainFile(lines.get(16));
+					    Project project = new Project(lines.get(1), lines.get(4), lines.get(7), lines.get(10), lines.get(13), lines.get(16));
 					    
 					    projects.add(project);
 					    
