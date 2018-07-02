@@ -8,17 +8,17 @@ import org.newdawn.slick.state.StateBasedGame;
 public class Demo extends StateBasedGame {
 
 	public static AppGameContainer app;
-	
+
 	public static int width = 720, height = 720;
-	
+
 	public Demo() {
 		super("Demo Library (By Kyle Mandell)");
 	}
-	
+
 	@Override
 	public void initStatesList(GameContainer gc) throws SlickException {
 		addState(new MainState());
-		
+
 		enterState(0);
 	}
 	
