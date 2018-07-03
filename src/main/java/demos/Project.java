@@ -1,4 +1,4 @@
-package main.java.demos;
+package demos;
 
 public class Project {
 	

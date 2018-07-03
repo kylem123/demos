@@ -1,4 +1,4 @@
-package main.java.demos;
+package demos;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,7 +25,7 @@ public class MainState extends BasicGameState {
 	private static final Color projectColour = new Color(230, 230, 250);
 	private static final Color projectColour2 = new Color(176, 224, 230);
 	
-	private static ArrayList<Project> projects = new ArrayList<>();
+	private static ArrayList<demos.Project> projects = new ArrayList<>();
 	private static ArrayList<MouseOverArea> buttons = new ArrayList<>();
 	
 	@Override

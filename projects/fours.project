@@ -1,0 +1,17 @@
+--Name--
+Fours
+
+--Description--
+A card game of fours
+
+--Author--
+Callum Tarttelin
+
+--Language ('python' or 'java')--
+python
+
+--Source Folder--
+fours
+
+--Main File--
+fours/ui.py

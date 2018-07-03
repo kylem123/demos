@@ -1,3 +1,4 @@
+group 'org.mandell'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'idea'
