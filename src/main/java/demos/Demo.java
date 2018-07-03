@@ -1,4 +1,4 @@
-package main.java.demos;
+package demos;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
