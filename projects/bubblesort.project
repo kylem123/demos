@@ -1,5 +1,5 @@
 --Name--
-Insertion Sort
+Bubble Sort
 
 --Description--
 A sorting algorithm (Year 12)
@@ -11,7 +11,7 @@ Kyle Mandell
 python
 
 --Source Folder--
-insertionsort
+bubblesort
 
 --Main File--
-insertionsort\insertion.py
+bubblesort/bubble.py

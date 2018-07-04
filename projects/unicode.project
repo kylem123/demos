@@ -1,8 +1,8 @@
 --Name--
-Insertion Sort
+Unicode
 
 --Description--
-A sorting algorithm (Year 12)
+Prints all of unicode
 
 --Author--
 Kyle Mandell
@@ -11,7 +11,7 @@ Kyle Mandell
 python
 
 --Source Folder--
-insertionsort
+unicode
 
 --Main File--
-insertionsort\insertion.py
+unicode/unicode.py

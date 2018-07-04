@@ -1,8 +1,8 @@
 --Name--
-Example Project
+Binary Convertor
 
 --Description--
-An example of a project
+Convert between binary and denary
 
 --Author--
 Kyle Mandell
@@ -11,7 +11,7 @@ Kyle Mandell
 python
 
 --Source Folder--
-example
+binary
 
 --Main File--
-example/main.py
+binary/binary.py

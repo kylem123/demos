@@ -1,8 +1,8 @@
 --Name--
-Insertion Sort
+Even Or Odd
 
 --Description--
-A sorting algorithm (Year 12)
+Separates numbers by parity
 
 --Author--
 Kyle Mandell
@@ -11,7 +11,7 @@ Kyle Mandell
 python
 
 --Source Folder--
-insertionsort
+evenodd
 
 --Main File--
-insertionsort\insertion.py
+evenodd/main.py

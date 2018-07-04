@@ -1,8 +1,8 @@
 --Name--
-Insertion Sort
+Hello, World!
 
 --Description--
-A sorting algorithm (Year 12)
+A starter python program
 
 --Author--
 Kyle Mandell
@@ -11,7 +11,7 @@ Kyle Mandell
 python
 
 --Source Folder--
-insertionsort
+helloworld
 
 --Main File--
-insertionsort\insertion.py
+helloworld/main.py
